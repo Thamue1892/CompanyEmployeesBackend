@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Contracts;
+using Entities.Exceptions;
 using Entities.Models;
 using Service.Contracts;
 using Shared.DataTransferObjects;
@@ -32,9 +33,12 @@ namespace Service
             
         }
 
-        public CompanyDto GetCompany(Guid companyId, bool trackChanges)
+        public CompanyDto GetCompany(Guid id, bool trackChanges)
         {
-            var company = _repository.Company.GetCompany(companyId, trackChanges);
+            var company = _repository.Company.GetCompany(id, trackChanges);
+            if (company == null)
+                throw new CompanyNotFoundException(id);
+
                 var companyDto = _mapper.Map<CompanyDto>(company);
                 return companyDto;
         }

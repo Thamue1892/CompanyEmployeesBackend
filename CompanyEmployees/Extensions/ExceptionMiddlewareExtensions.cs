@@ -7,7 +7,7 @@ namespace CompanyEmployees.Extensions
 {
     public static class ExceptionMiddlewareExtensions
     {
-        public static void ConfigureExceptionHandler(this WebApplication app,ILoggerManager logger)
+        public static void ConfigureExceptionHandler(this WebApplication app, ILoggerManager logger)
         {
             app.UseExceptionHandler(appError =>
             {
@@ -21,15 +21,13 @@ namespace CompanyEmployees.Extensions
                     {
                         context.Response.StatusCode = contextFeature.Error switch
                         {
-                            NotFoundException => StatusCodes.Status404NotFound,
-                           _ => StatusCodes.Status500InternalServerError
-                        };
-
+                            NotFoundException => StatusCodes.Status404NotFound, 
+                            _ => StatusCodes.Status500InternalServerError
+                        }; 
                         logger.LogError($"Something went wrong: {contextFeature.Error}");
                         await context.Response.WriteAsync(new ErrorDetails()
                         {
-                            StatusCode = context.Response.StatusCode,
-                            Message = contextFeature.Error.Message,
+                            StatusCode = context.Response.StatusCode, Message = contextFeature.Error.Message,
                         }.ToString());
                     }
                 });

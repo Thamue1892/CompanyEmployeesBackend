@@ -39,7 +39,7 @@ namespace Service
             if (company == null)
                 throw new CompanyNotFoundException(id);
 
-                var companyDto = _mapper.Map<CompanyDto>(company);
+            var companyDto = _mapper.Map<CompanyDto>(company);
                 return companyDto;
         }
     }

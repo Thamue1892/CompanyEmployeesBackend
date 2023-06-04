@@ -11,13 +11,13 @@ using Shared.DataTransferObjects;
 
 namespace Service
 {
-    internal sealed class EmployeeService:IEmployeeService
+    internal sealed class EmployeeService : IEmployeeService
     {
         private readonly IRepositoryManager _repository;
         private readonly ILoggerManager _logger;
         private readonly IMapper _mapper;
 
-        public EmployeeService(IRepositoryManager repository,ILoggerManager logger,IMapper mapper)
+        public EmployeeService(IRepositoryManager repository, ILoggerManager logger, IMapper mapper)
         {
             _repository = repository;
             _logger = logger;
@@ -77,6 +77,20 @@ namespace Service
                 throw new EmployeeNotFoundException(id);
 
             _repository.Employee.DeleteEmployee(employeeForCompany);
+            _repository.Save();
+        }
+
+        public void UpdateEmployeeForCompany(Guid companyId, Guid id, EmployeeForUpdateDto employeeForUpdate, bool compTrackChanges, bool empTrackChanges)
+        {
+            var company = _repository.Company.GetCompany(companyId, compTrackChanges);
+            if (company is null)
+                throw new CompanyNotFoundException(companyId);
+
+            var employeeEntity = _repository.Employee.GetEmployee(companyId, id, empTrackChanges);
+            if (employeeEntity is null)
+                throw new EmployeeNotFoundException(id);
+
+            _mapper.Map(employeeForUpdate, employeeEntity);
             _repository.Save();
         }
     }

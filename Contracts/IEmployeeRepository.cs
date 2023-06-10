@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Entities.Models;
+﻿using Entities.Models;
 
-namespace Contracts
+namespace Contracts;
+
+public interface IEmployeeRepository
 {
-    public interface IEmployeeRepository
-    {
-        Task<IEnumerable<Employee>> GetEmployeesAsync(Guid companyId, bool trackChanges);
-        Task<Employee>GetEmployeeAsync(Guid companyId, Guid id, bool trackChanges);
-        Task CreateEmployeeForCompanyAsync(Guid companyId, Employee employee);
-        Task DeleteEmployeeAsync(Employee employee);
-    }
+    Task<IEnumerable<Employee>> GetEmployeesAsync(Guid companyId, bool trackChanges);
+    Task<Employee> GetEmployeeAsync(Guid companyId, Guid id, bool trackChanges);
+    void CreateEmployeeForCompany(Guid companyId, Employee employee);
+    void DeleteEmployee(Employee employee);
 }

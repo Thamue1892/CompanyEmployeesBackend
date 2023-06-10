@@ -81,10 +81,10 @@ namespace CompanyEmployees.Presentation.Controllers
 
           
           
-            _service.EmployeeService.SaveChangesForPatchAsync(result.employeeToPatch, result.employeeEntity);
+          await  _service.EmployeeService.SaveChangesForPatchAsync(result.employeeToPatch, result.employeeEntity);
             return NoContent();
 
-           _service.EmployeeService.SaveChangesForPatchAsync(result.employeeToPatch, result.employeeEntity);
+          await _service.EmployeeService.SaveChangesForPatchAsync(result.employeeToPatch, result.employeeEntity);
             return NoContent();
         }
     }

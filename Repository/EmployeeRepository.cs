@@ -13,20 +13,19 @@ internal sealed class EmployeeRepository : RepositoryBase<Employee>, IEmployeeRe
     {
     }
 
-    public async Task<PagedList<Employee>> GetEmployeesAsync(Guid companyId, EmployeeParameters employeeParameters,
-        bool trackChanges)
+    public async Task<PagedList<Employee>> GetEmployeesAsync(Guid companyId,
+        EmployeeParameters employeeParameters, bool trackChanges)
     {
-        var employees = await FindByCondition(e=>e.CompanyId.Equals(companyId),trackChanges)
+        var employees = await FindByCondition(e => e.CompanyId.Equals(companyId), trackChanges)
             .FilterEmployees(employeeParameters.MinAge, employeeParameters.MaxAge)
             .Search(employeeParameters.SearchTerm)
             .Sort(employeeParameters.OrderBy)
-            .OrderBy(e => e.Name)
             .ToListAsync();
 
-        var count = await FindByCondition(e => e.CompanyId.Equals(companyId), trackChanges).CountAsync();
-
-        return new PagedList<Employee>(employees,count, employeeParameters.PageNumber, employeeParameters.PageSize);
+        return PagedList<Employee>
+            .ToPagedList(employees, employeeParameters.PageNumber, employeeParameters.PageSize);
     }
+
     public async Task<Employee> GetEmployeeAsync(Guid companyId, Guid id, bool trackChanges) =>
         await FindByCondition(e => e.CompanyId.Equals(companyId) && e.Id.Equals(id), trackChanges)
             .SingleOrDefaultAsync();
@@ -36,6 +35,6 @@ internal sealed class EmployeeRepository : RepositoryBase<Employee>, IEmployeeRe
         employee.CompanyId = companyId;
         Create(employee);
     }
-    
+
     public void DeleteEmployee(Employee employee) => Delete(employee);
 }

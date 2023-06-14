@@ -7804,3 +7804,167 @@
 2023-06-13 23:49:45.4161 Trace  Scanning Property LineEnding 'Default' NLog.Targets
 2023-06-13 23:49:45.4212 Trace FileTarget(Name=logfile) has 2 layouts
 2023-06-13 23:49:45.4212 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-06-14 20:34:53.8819 Info Message Template Auto Format enabled
+2023-06-14 20:34:54.0410 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-06-14 20:34:54.4628 Debug Setting 'NLog.Targets.FileTarget.Name' to 'logfile'
+2023-06-14 20:34:54.4919 Debug Setting 'NLog.Targets.FileTarget.FileName' to '.\logs\${shortdate}_logfile.txt'
+2023-06-14 20:34:54.5268 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-06-14 20:34:54.5474 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-06-14 20:34:54.5694 Debug Setting 'NLog.Targets.FileTarget.Layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-06-14 20:34:54.5801 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-06-14 20:34:54.5915 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-06-14 20:34:54.6108 Debug Setting 'NLog.LayoutRenderers.LevelLayoutRenderer.Uppercase' to 'true'
+2023-06-14 20:34:54.6258 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-06-14 20:34:54.6368 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-06-14 20:34:54.6511 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-06-14 20:34:54.6511 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-06-14 20:34:54.6781 Debug Adding target NLog.Targets.FileTarget(Name=logfile)
+2023-06-14 20:34:54.6934 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-06-14 20:34:54.7058 Trace ParseRulesElement
+2023-06-14 20:34:54.7706 Debug Watching file-filter 'nlog.config' in directory: C:\Users\Thamsanqa Mpofu\Source\Repos\CompanyEmployeesBackend\CompanyEmployees
+2023-06-14 20:34:54.7786 Debug --- NLog configuration dump ---
+2023-06-14 20:34:54.7786 Debug Targets:
+2023-06-14 20:34:54.7965 Debug FileTarget(Name=logfile)
+2023-06-14 20:34:54.7965 Debug Rules:
+2023-06-14 20:34:54.8600 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-06-14 20:34:54.8737 Debug --- End of NLog configuration dump ---
+2023-06-14 20:34:54.8928 Trace FindReachableObject<System.Object>:
+2023-06-14 20:34:54.9055 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-06-14 20:34:54.9503 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-06-14 20:34:54.9648 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-06-14 20:34:54.9648 Trace   Scanning Property FileName '.\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-06-14 20:34:54.9851 Trace   Scanning SimpleLayout '.\logs\${shortdate}_logfile.txt'
+2023-06-14 20:34:54.9851 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-06-14 20:34:55.0006 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 20:34:55.0006 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-06-14 20:34:55.0136 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 20:34:55.0136 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-06-14 20:34:55.0562 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-06-14 20:34:55.0609 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-06-14 20:34:55.0609 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-06-14 20:34:55.0766 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 20:34:55.0766 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-06-14 20:34:55.0955 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 20:34:55.0955 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-06-14 20:34:55.1148 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-06-14 20:34:55.1247 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-06-14 20:34:55.1247 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-06-14 20:34:55.1484 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Thamsanqa Mpofu\Source\Repos\CompanyEmployeesBackend\CompanyEmployees\nlog.config
+2023-06-14 20:34:55.1698 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2023-06-14 20:34:55.1927 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2023-06-14 20:34:55.2032 Trace Initializing Layout Renderer: ${message}
+2023-06-14 20:34:55.2149 Trace Initializing Layout Renderer: ${literal}
+2023-06-14 20:34:55.2149 Trace Initializing Layout Renderer: ${level}
+2023-06-14 20:34:55.2335 Trace Initializing Layout Renderer: ${literal}
+2023-06-14 20:34:55.2335 Trace Initializing Layout Renderer: ${longdate}
+2023-06-14 20:34:55.2537 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-06-14 20:34:55.2704 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-06-14 20:34:55.2804 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-06-14 20:34:55.2932 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-06-14 20:34:55.2932 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-06-14 20:34:55.3101 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 20:34:55.3101 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-06-14 20:34:55.3101 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 20:34:55.3284 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-06-14 20:34:55.3284 Trace Initializing Layout Renderer: ${literal}
+2023-06-14 20:34:55.3422 Trace Initializing Layout Renderer: ${shortdate}
+2023-06-14 20:34:55.3422 Trace Initializing Layout Renderer: ${literal}
+2023-06-14 20:34:55.3563 Trace Initializing .\logs\${shortdate}_logfile.txt
+2023-06-14 20:34:55.3563 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-06-14 20:34:55.3733 Trace Scanning SimpleLayout '.\logs\${shortdate}_logfile.txt'
+2023-06-14 20:34:55.3733 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-06-14 20:34:55.3960 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 20:34:55.4026 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-06-14 20:34:55.4026 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 20:34:55.4174 Trace Initializing FileTarget(Name=logfile)
+2023-06-14 20:34:55.4174 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-06-14 20:34:55.4733 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-06-14 20:34:55.4881 Trace  Scanning Property FileName '.\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-06-14 20:34:55.4985 Trace  Scanning SimpleLayout '.\logs\${shortdate}_logfile.txt'
+2023-06-14 20:34:55.4985 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-06-14 20:34:55.5208 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-06-14 20:34:55.6150 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-06-14 20:34:55.6240 Trace FileTarget(Name=logfile) has 2 layouts
+2023-06-14 20:34:55.6370 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-06-14 22:46:52.4786 Info Message Template Auto Format enabled
+2023-06-14 22:46:52.7173 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-06-14 22:46:53.1905 Debug Setting 'NLog.Targets.FileTarget.Name' to 'logfile'
+2023-06-14 22:46:53.2076 Debug Setting 'NLog.Targets.FileTarget.FileName' to '.\logs\${shortdate}_logfile.txt'
+2023-06-14 22:46:53.2394 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-06-14 22:46:53.2557 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-06-14 22:46:53.2752 Debug Setting 'NLog.Targets.FileTarget.Layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-06-14 22:46:53.2836 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-06-14 22:46:53.2944 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-06-14 22:46:53.3108 Debug Setting 'NLog.LayoutRenderers.LevelLayoutRenderer.Uppercase' to 'true'
+2023-06-14 22:46:53.3259 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-06-14 22:46:53.3259 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-06-14 22:46:53.3453 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-06-14 22:46:53.3558 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-06-14 22:46:53.3703 Debug Adding target NLog.Targets.FileTarget(Name=logfile)
+2023-06-14 22:46:53.3703 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-06-14 22:46:53.3938 Trace ParseRulesElement
+2023-06-14 22:46:53.4615 Debug Watching file-filter 'nlog.config' in directory: C:\Users\Thamsanqa Mpofu\Source\Repos\CompanyEmployeesBackend\CompanyEmployees
+2023-06-14 22:46:53.5047 Debug --- NLog configuration dump ---
+2023-06-14 22:46:53.5163 Debug Targets:
+2023-06-14 22:46:53.5293 Debug FileTarget(Name=logfile)
+2023-06-14 22:46:53.5293 Debug Rules:
+2023-06-14 22:46:53.5537 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-06-14 22:46:53.5627 Debug --- End of NLog configuration dump ---
+2023-06-14 22:46:53.5814 Trace FindReachableObject<System.Object>:
+2023-06-14 22:46:53.5997 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-06-14 22:46:53.6222 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-06-14 22:46:53.6439 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-06-14 22:46:53.6555 Trace   Scanning Property FileName '.\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-06-14 22:46:53.6758 Trace   Scanning SimpleLayout '.\logs\${shortdate}_logfile.txt'
+2023-06-14 22:46:53.6888 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-06-14 22:46:53.6990 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 22:46:53.6990 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-06-14 22:46:53.7203 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 22:46:53.7317 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-06-14 22:46:53.7317 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-06-14 22:46:53.7504 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-06-14 22:46:53.7662 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-06-14 22:46:53.7893 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 22:46:53.7975 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-06-14 22:46:53.7975 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 22:46:53.8153 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-06-14 22:46:53.8256 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-06-14 22:46:53.8256 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-06-14 22:46:53.8497 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-06-14 22:46:53.8679 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\Thamsanqa Mpofu\Source\Repos\CompanyEmployeesBackend\CompanyEmployees\nlog.config
+2023-06-14 22:46:53.8872 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2023-06-14 22:46:53.9069 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2023-06-14 22:46:53.9194 Trace Initializing Layout Renderer: ${message}
+2023-06-14 22:46:53.9194 Trace Initializing Layout Renderer: ${literal}
+2023-06-14 22:46:53.9394 Trace Initializing Layout Renderer: ${level}
+2023-06-14 22:46:53.9494 Trace Initializing Layout Renderer: ${literal}
+2023-06-14 22:46:53.9494 Trace Initializing Layout Renderer: ${longdate}
+2023-06-14 22:46:53.9693 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-06-14 22:46:53.9849 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-06-14 22:46:53.9972 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-06-14 22:46:53.9972 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-06-14 22:46:54.0186 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-06-14 22:46:54.0273 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 22:46:54.0273 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-06-14 22:46:54.0490 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 22:46:54.0621 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-06-14 22:46:54.0750 Trace Initializing Layout Renderer: ${literal}
+2023-06-14 22:46:54.0750 Trace Initializing Layout Renderer: ${shortdate}
+2023-06-14 22:46:54.0926 Trace Initializing Layout Renderer: ${literal}
+2023-06-14 22:46:54.0926 Trace Initializing .\logs\${shortdate}_logfile.txt
+2023-06-14 22:46:54.1142 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-06-14 22:46:54.1249 Trace Scanning SimpleLayout '.\logs\${shortdate}_logfile.txt'
+2023-06-14 22:46:54.1249 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-06-14 22:46:54.1449 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 22:46:54.1554 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-06-14 22:46:54.1714 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-06-14 22:46:54.1827 Trace Initializing FileTarget(Name=logfile)
+2023-06-14 22:46:54.1827 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-06-14 22:46:54.2082 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-06-14 22:46:54.2172 Trace  Scanning Property FileName '.\logs\${shortdate}_logfile.txt' NLog.Layouts
+2023-06-14 22:46:54.2172 Trace  Scanning SimpleLayout '.\logs\${shortdate}_logfile.txt'
+2023-06-14 22:46:54.2381 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-06-14 22:46:54.2478 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-06-14 22:46:54.2478 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-06-14 22:46:54.2660 Trace FileTarget(Name=logfile) has 2 layouts
+2023-06-14 22:46:54.2787 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory

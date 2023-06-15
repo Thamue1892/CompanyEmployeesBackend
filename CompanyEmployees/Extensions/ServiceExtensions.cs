@@ -52,6 +52,7 @@ namespace CompanyEmployees.Extensions
                 {
                     systemTextJsonOutputFormatter
                         .SupportedMediaTypes.Add("application/vnd.thaymes.hateoas+json");
+                    systemTextJsonOutputFormatter.SupportedMediaTypes.Add("application/vnd.thaymes.apiroot+json");
                 }
 
                 var xmlOutputFormatter = config.OutputFormatters
@@ -60,6 +61,7 @@ namespace CompanyEmployees.Extensions
                 if (xmlOutputFormatter != null)
                 {
                     xmlOutputFormatter.SupportedMediaTypes.Add("application/vnd.thaymes.hateoas+xml");
+                    xmlOutputFormatter.SupportedMediaTypes.Add("application/vnd.thaymes.apiroot+xml");
                 }
             });
         }

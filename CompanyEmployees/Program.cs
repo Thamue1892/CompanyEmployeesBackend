@@ -41,6 +41,7 @@ builder.Services.AddScoped<ValidateMediaTypeAttribute>();
 builder.Services.AddScoped<IEmployeeLinks,EmployeeLinks>();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
+builder.Services.ConfigureVersioning();
 
 var app = builder.Build();
 var logger = app.Services.GetRequiredService<ILoggerManager>();

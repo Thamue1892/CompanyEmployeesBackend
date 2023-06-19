@@ -8,9 +8,14 @@ using Service.Contracts;
 
 namespace CompanyEmployees.Presentation.Controllers
 {
+    [Route("api/companies")]
+    [ApiController]
+    [ApiExplorerSettings(GroupName = "v2")]
     public class CompaniesV2Controller:ControllerBase
     {
         private readonly IServiceManager _service;
+
+        
         public CompaniesV2Controller(IServiceManager service) => _service = service;
 
         [ApiVersion("2.0")]

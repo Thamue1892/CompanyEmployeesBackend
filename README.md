@@ -4,8 +4,8 @@ Company Employees is a backend system  built using [.Net Core](https://dotnet.mi
 With Company Employees you can build a a front-end to query a company database and get information about company employees.
 
 ## Table of Contents
-- [Requirements](##Requirements)
-- [Contact](##Contact)
+- [Requirements](#Requirements)
+- [Contact](#Contact)
 
 ## Requirements
 - .Net Core 6 or later
